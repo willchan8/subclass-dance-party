@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .addDancerOneButton, .addDancerTwoButton{
   padding:5px 12px;
   float:right;
 }
@@ -23,5 +23,15 @@ body, a:link, a:visited, a:active{
 .Dancer{
   border:10px solid red;
   border-radius:10px;
+  position:absolute;
+}
+.dancerOne{
+  border:30px solid blue;
+  border-radius:0px;
+  position:absolute;
+}
+.DancerTwo{
+  border:30px solid green;
+  border-radius:5px;
   position:absolute;
 }
