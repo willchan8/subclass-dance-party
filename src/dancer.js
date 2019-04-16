@@ -33,7 +33,7 @@
 
 
 var Dancer = function(top, left, timeBetweenSteps) {
-  this.$node = $('<span class="Dancer"></span>');
+  this.$node = $('<img src="src/pics/cow.jpg" alt="Davis Cow" class="Dancer" height="100" width="100"></img>');
   this.timeBetweenSteps = timeBetweenSteps;
   this.top = top;
   this.left = left;
@@ -60,4 +60,14 @@ Dancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
+};
+
+Dancer.prototype.lineUp = function(top, left) {
+  // // Use css top and left properties to position our <span> tag
+  // // where it belongs on the page. See http://api.jquery.com/css/
+  // //
+  this.$node.removeAttr("style");
+
+  this.$node.addClass("lineUp");
+
 };

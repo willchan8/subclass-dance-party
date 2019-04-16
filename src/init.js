@@ -25,11 +25,14 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var Dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+      // $("body").height() * Math.random(),
+      // $("body").width() * Math.random(),
+      Math.max(50, (370 * Math.random())),
+      Math.max(100, (1400 * Math.random())),
+      1000
     );
     $('body').append(Dancer.$node);
+    window.dancers.push(Dancer);
   });
 
 
@@ -58,11 +61,14 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancerOne = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+      // $("body").height() * Math.random(),
+      // $("body").width() * Math.random(),
+      Math.max(50, (370 * Math.random())),
+      Math.max(100, (1400 * Math.random())),
+      2000
     );
     $('body').append(dancerOne.$node);
+    window.dancers.push(dancerOne);
   });
 });
 
@@ -93,10 +99,33 @@ $('.addDancerTwoButton').on('click', function(event) {
   // make a dancer with a random position
 
   var DancerTwo = new dancerMakerFunction(
-    $("body").height() * Math.random(),
-    $("body").width() * Math.random(),
-    Math.random() * 1000
+    // $("body").height() * Math.random(),
+    // $("body").width() * Math.random(),
+    Math.max(50, (370 * Math.random())),
+    Math.max(100, (1400 * Math.random())),
+    1500
   );
   $('body').append(DancerTwo.$node);
+  window.dancers.push(DancerTwo);
 });
 
+
+
+// LineUp Button
+$('.lineUpButton').on('click', function(event) {
+
+  var top = 100;
+  var left = 100;
+  
+  for (var i = 0; i < window.dancers.length; i++) {
+    window.dancers[i].lineUp(top, left);
+    // window.dancers[i].top = top;
+    // window.dancers[i].left = left;
+    left += 120;
+    if(left > 1600) {
+      top += 120;
+      left = 100;
+    }
+  }
+  
+});

@@ -3,10 +3,12 @@ var dancerOne = function(top, left, timeBetweenSteps) {
   
   Dancer.call(this, top, left, timeBetweenSteps);
 
-  console.log(this);
+  this.$node.attr("src", "src/pics/aggielogo.png");
+  // this.$node.attr("height", "200");
+  // this.$node.attr("width", "200");
+  this.$node.attr("alt", "Aggie");
   this.$node.addClass('dancerOne');
   this.$node.removeClass('Dancer');
-
 
 };
 

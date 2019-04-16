@@ -4,34 +4,61 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image: url("src/pics/bike-circle.jpeg");
+  background-size: cover;
+  background-position: center;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: gold;
 }
-.title, .addDancerButton, .addDancerOneButton, .addDancerTwoButton{
+a:hover{
+  color: white;
+  cursor: pointer;
+}
+.title, .addDancerButton, .addDancerOneButton, .addDancerTwoButton, .lineUpButton{
   padding:5px 12px;
-  float:right;
+  float:left;
+  font-family: 'Helvetica', sans-serif;
+  color:gold;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: darkblue;
 }
 .title{
-  background-color: #777;
+  background-color: navy;
+}
+.title:hover{
+  color: white;
 }
 .Dancer{
-  border:10px solid red;
+  border:5px solid black;
   border-radius:10px;
   position:absolute;
 }
 .dancerOne{
-  border:30px solid blue;
-  border-radius:0px;
-  position:absolute;
-}
-.DancerTwo{
-  border:30px solid green;
+  border:5px solid black;
   border-radius:5px;
   position:absolute;
 }
+.DancerTwo{
+  border:5px solid black;
+  border-radius:5px;
+  position:absolute;
+  animation: rotation 3s infinite linear;
+}
+.lineUp{
+  margin:10px 10px;
+  position: relative;
+  float:left;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+

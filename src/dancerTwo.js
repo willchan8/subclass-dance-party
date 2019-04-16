@@ -3,7 +3,9 @@ var DancerTwo = function(top, left, timeBetweenSteps) {
   
   Dancer.call(this, top, left, timeBetweenSteps);
 
-  console.log(this);
+  
+  this.$node.attr("src", "src/pics/ucdlogo.png");
+  this.$node.attr("alt", "UCD Logo");
   this.$node.addClass('DancerTwo');
   this.$node.removeClass('Dancer');
 
@@ -20,5 +22,5 @@ DancerTwo.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.toggle();
+  //this.$node.toggle();
 };
