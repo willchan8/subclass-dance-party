@@ -40,6 +40,13 @@ a:hover{
   border:5px solid black;
   border-radius:10px;
   position:absolute;
+  transition: width 1s, height 1s;
+}
+
+.Dancer:hover{
+  animation:shake 0.5s infinite;
+  height:500px;
+  width:500px;
 }
 
 .dancerOne{
@@ -47,6 +54,12 @@ a:hover{
   border-radius:5px;
   position:absolute;
   animation: shake 1s infinite;
+  transition: width 2s, height 2s;
+}
+
+.dancerOne:hover{
+  width: 300px;
+  height: 300px;
 }
 
 .DancerTwo{
@@ -56,10 +69,14 @@ a:hover{
   animation: rotation 3s infinite linear;
 }
 
+.DancerTwo:hover{
+  animation: backwardsRotation 1.5s infinite linear; 
+}
+
 .lineUp{
-  margin:10px 10px;
   position: relative;
   float:left;
+  margin:10px 10px;
 }
 
 @keyframes rotation {
@@ -67,7 +84,16 @@ a:hover{
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes backwardsRotation {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 
