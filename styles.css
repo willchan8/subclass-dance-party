@@ -2,12 +2,18 @@ body, html{
   height:100%;
 }
 
-body{
+.initialBG{
   margin: 0px;
   background-image: url("src/pics/bike-circle.jpeg");
   background-size: cover;
   background-position: center;
-  /* font-size: 18px; */
+}
+
+.newBG{
+  margin: 0px;
+  background-image: url("src/pics/giphy.gif");
+  background-size: cover;
+  background-position: center;
 }
 
 body, a:link, a:visited, a:active{
@@ -19,7 +25,7 @@ a:hover{
   cursor: pointer;
 }
 
-.title, .addDancerButton, .addDancerOneButton, .addDancerTwoButton, .lineUpButton{
+.title, .addDancerButton, .addDancerOneButton, .addDancerTwoButton, .lineUpButton, .objectDanceParty{
   font-size: 18px;
   padding:5px 12px;
   float:left;
@@ -34,6 +40,7 @@ a:hover{
 
 .title:hover{
   color: white;
+  cursor: pointer;
 }
 
 .Dancer{
@@ -47,6 +54,7 @@ a:hover{
   animation:shake 0.5s infinite;
   height:500px;
   width:500px;
+  border: 15px solid red;
 }
 
 .dancerOne{
@@ -100,13 +108,13 @@ a:hover{
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  20% { transform: translate(-15px, 0px) rotate(1deg); }
   30% { transform: translate(3px, 2px) rotate(0deg); }
   40% { transform: translate(1px, -1px) rotate(1deg); }
   50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  60% { transform: translate(-15px, 1px) rotate(0deg); }
   70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  80% { transform: translate(-1px, 15px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

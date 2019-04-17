@@ -65,3 +65,8 @@ $('.lineUpButton').on('click', function(event) {
     window.dancers[i].lineUp();
   }
 });
+
+$('.objectDanceParty').on('click', function(event) {
+  $('body').removeClass("initialBG");
+  $('body').addClass("newBG");
+});
